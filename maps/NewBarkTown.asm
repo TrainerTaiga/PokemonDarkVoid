@@ -102,7 +102,42 @@ NewBarkTownTeacherScript:
 	end
 
 NewBarkTownFisherScript:
-	jumptextfaceplayer Text_ElmDiscoveredNewMon
+	opentext
+	writetext Text_DebugScriptAlpha
+	waitbutton
+	closetext
+	setflag ENGINE_POKEDEX
+	disappear ELMSLAB_POKE_BALL1
+	setevent EVENT_GOT_CYNDAQUIL_FROM_ELM
+	setevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	setflag ENGINE_FLYPOINT_CHERRYGROVE
+	setflag ENGINE_FLYPOINT_VIOLET
+	setflag ENGINE_FLYPOINT_AZALEA
+	setflag ENGINE_FLYPOINT_GOLDENROD
+	setflag ENGINE_FLYPOINT_ECRUTEAK
+	setflag ENGINE_FLYPOINT_MAHOGANY
+	setflag ENGINE_FLYPOINT_OLIVINE
+	setflag ENGINE_FLYPOINT_CIANWOOD
+	setflag ENGINE_FLYPOINT_BLACKTHORN
+	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
+	setflag ENGINE_FLYPOINT_SILVER_CAVE
+	setflag ENGINE_ZEPHYRBADGE
+	setflag ENGINE_HIVEBADGE
+	setflag ENGINE_PLAINBADGE
+	setflag ENGINE_FOGBADGE
+	setflag ENGINE_MINERALBADGE
+	setflag ENGINE_STORMBADGE ; 20
+	setflag ENGINE_GLACIERBADGE
+	setflag ENGINE_RISINGBADGE
+	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	setevent EVENT_CLEARED_SLOWPOKE_WELL
+	givepoke MEWTWO, 100, BERRY
+	givepoke MEW, 100, BERRY
+	giveitem MASTER_BALL, 99
+	giveitem MAX_REPEL, 99
+	verbosegiveitem HM_FLY
+	closetext
+	end
 
 NewBarkTownSilverScript:
 	opentext
@@ -236,6 +271,13 @@ Text_CallMomOnGear:
 
 	para "let her know how"
 	line "you're doing."
+	done
+	
+Text_DebugScriptAlpha:
+	text "Welcome to the Alpha!"
+	para "Here you get stuff."
+	line "Good for debugging."
+	cont "Dank meme."
 	done
 
 Text_ElmDiscoveredNewMon:
