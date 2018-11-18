@@ -34,6 +34,7 @@ Marts:
 	dw MartMtMoon
 	dw MartIndigoPlateau
 	dw MartUnderground
+	dw MartGoldenrodB1F
 .End
 
 MartCherrygrove:
@@ -398,6 +399,20 @@ MartUnderground:
 	db HEAL_POWDER
 	db REVIVAL_HERB
 	db -1 ; end
+	
+MartGoldenrodB1F:
+	db 10 ; # items
+	db MOON_STONE
+	db SUN_STONE
+	db THUNDERSTONE
+	db FIRE_STONE
+	db WATER_STONE
+	db BERRY
+	db PRZCUREBERRY
+	db PSNCUREBERRY
+	db MYSTERYBERRY
+	db MIRACLEBERRY
+	db -1
 
 DefaultMart:
 	db 2 ; # items
