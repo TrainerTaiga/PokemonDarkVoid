@@ -699,5 +699,8 @@ KRIS EQU __enum__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+	
+	trainerclass BURIEDALIVE
+	const BURIEDALIVE_1
 
 NUM_TRAINER_CLASSES EQU __enum__
